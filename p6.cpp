@@ -114,7 +114,7 @@ void func(){
       if( sqrt(pi_lab.Px()*pi_lab.Px()+ pi_lab.Py()*pi_lab.Py()+pi_lab.Pz()*pi_lab.Pz()) >40 ){
         double d= fdist(E_k,t_k,m_Ks);
         double b=fdist(pi_lab.E(),t_pi,m_piplus);
-        //if(filter(theta,phi,theta_lab,phi_lab,d,b)==1 ){
+        if(filter(theta,phi,theta_lab,phi_lab,d,b)==1 ){
           //hist1->Fill(phi_pi);
           //hist2->Fill(phi_lab);
           //hist4->Fill(theta_lab);
