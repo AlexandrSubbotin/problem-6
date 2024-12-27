@@ -67,7 +67,7 @@ double filter(double theta1,double phi1,double theta2,double phi2,double d, doub
 void func(){
     double E_k;
     TH1F *hist1 = new TH1F("h1"," угол фи пи мезона в системе Ks",100,0,2*M_PI);
-    TH1F *hist2 = new TH1F("h2","угол phi пи мезона в лаб системе ",100,0,2*M_PI);
+    TH1F *hist2 = new TH1F("h2","угол phi пи мезона в лаб системе ",100,-M_PI,2*M_PI);
     TH1F *hist3 = new TH1F("h3"," угол theta Ks мезона",100,0,M_PI);
     TH1F *hist4= new TH1F("h4","угол theta пи мезона в лаб системе ",100,0,M_PI);
     TH1F *hist5 = new TH1F("h5"," угол phi пи мезона в системе Ks",100,0, 2*M_PI);
@@ -114,7 +114,7 @@ void func(){
       if( sqrt(pi_lab.Px()*pi_lab.Px()+ pi_lab.Py()*pi_lab.Py()+pi_lab.Pz()*pi_lab.Pz()) >40 ){
         double d= fdist(E_k,t_k,m_Ks);
         double b=fdist(pi_lab.E(),t_pi,m_piplus);
-        if(filter(theta,phi,theta_lab,phi_lab,d,b)==1 ){
+        //if(filter(theta,phi,theta_lab,phi_lab,d,b)==1 ){
           //hist1->Fill(phi_pi);
           //hist2->Fill(phi_lab);
           //hist4->Fill(theta_lab);
@@ -135,7 +135,6 @@ void func(){
   hist5->Draw();
   c1->cd(6);
   hist6->Draw();
-}
 }
 int main(){
   std::cout<< sqrt(4);
