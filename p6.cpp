@@ -136,6 +136,7 @@ void func(){
   c1->cd(6);
   hist6->Draw();
 }
+}
 int main(){
   std::cout<< sqrt(4);
 }
